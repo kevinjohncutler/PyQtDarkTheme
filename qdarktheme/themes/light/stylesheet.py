@@ -829,7 +829,7 @@ QTreeView::branch:open:has-children:has-siblings:disabled  {
     image: url(${path}/light/svg/expand_less__icon-foreground-disabled__rotate-180.svg);
 }
 QTableView {
-    gridline-color: #58595c;
+    gridline-color: #585858;
     background: #ffffff;
 }
 QTableView QTableCornerButton::section {
