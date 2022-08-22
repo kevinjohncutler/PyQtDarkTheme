@@ -14,7 +14,7 @@ from tools.build_resources.color import RGBA
 DIST_DIR_PATH = get_qdarktheme_root_path() / "themes"
 
 
-@dataclass(unsafe_hash=True, frozen=True)
+@dataclass(unsafe_hash=True, frozen=False)
 class _Url:
     """Class handling the properties of the $url{...} variable in the stylesheet template."""
 
@@ -131,12 +131,12 @@ def build_resources(build_path: Path, theme_file_paths: list[Path], root_init_fi
     svg_dir_path = Path(__file__).parent / "svg"
     themes = []
 
+    
     for theme_file_path in theme_file_paths:
         theme = theme_file_path.stem
         themes.append(theme)
         output_dir_path = build_path / theme
         output_dir_path.mkdir()
-
         hex_colors: dict[str, str] = json.loads(theme_file_path.read_bytes())
 
         _build_init_file(theme, output_dir_path)
