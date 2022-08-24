@@ -1,7 +1,7 @@
 {
     "base": "#202020",
     "icon-foreground": "#eff1f1",
-    "icon-foreground-disabled": "#697177",
+    "icon-foreground-disabled": "#696969",
     "highlight": "#d2aa02",
     "highlight-hover": "#01cbb3",
     "highlight-pressed": "#01cbb3",
@@ -9,7 +9,7 @@
     "highlight-disabled": "#535353",
     "text": "#e4e4e4",
     "highlight-text": "#202020",
-    "text-disabled": "#697177",
+    "text-disabled": "#696969",
     "border": "#404040",
     "panel": "#323232",
     "title": "#000000",
@@ -43,7 +43,7 @@
     "scrollarea-highlight-disabled": "#e4e4e4",
     "itemview-alternate": "#303030",
     "itemview-item-hover": "#292929",
-    "itemview-highlight-inactive": "#393d41",
+    "itemview-highlight-inactive": "#393939",
     "textedit": "#202020",
     "textedit-highlight": "#d2aa02",
     "headerview-section": "#404040",
@@ -51,5 +51,5 @@
     "tableview-grid": "#585858",
     "link-visited": "#c58af8",
     "placeholder-text": "#8a8a8a",
-    "menu-checkbox": "#48494b"
+    "menu-checkbox": "#484848"
 }

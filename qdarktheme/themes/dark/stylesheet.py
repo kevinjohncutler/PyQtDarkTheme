@@ -20,9 +20,9 @@ QWidget {
     selection-color: #202020;
 }
 QWidget:disabled {
-    color: #697177;
+    color: #696969;
     selection-background-color: #535353;
-    selection-color: #697177;
+    selection-color: #696969;
 }
 QWidget {
     backward-icon: url(${path}/dark/svg/arrow_upward__icon-foreground__rotate-270.svg);
@@ -554,7 +554,7 @@ QTabBar::tab:selected {
 }
 QTabBar::tab:selected:disabled {
     background: #535353;
-    color: #697177;
+    color: #696969;
 }
 QTabBar::tab:top {
     border-bottom: 2px solid #404040;
@@ -761,11 +761,11 @@ QPlainTextEdit:selected {
 }
 QTextEdit:!focus,
 QPlainTextEdit:!focus {
-    $env_patch{"version": ">=5.15.0", "value": "selection-background-color: #393d41"};
+    $env_patch{"version": ">=5.15.0", "value": "selection-background-color: #393939"};
 }
 QTextEdit:!active,
 QPlainTextEdit:!active {
-    $env_patch{"version": "<5.15.0", "value": "selection-background-color: #393d41"};
+    $env_patch{"version": "<5.15.0", "value": "selection-background-color: #393939"};
 }
 QAbstractItemView {
     alternate-background-color: #303030;
@@ -777,7 +777,7 @@ QAbstractItemView:selected:!active,
 QAbstractItemView:selected:!focus,
 QAbstractItemView::item:selected:!active,
 QTreeView::branch:selected:!active {
-    background: #393d41;
+    background: #393939;
 }
 QAbstractItemView::item:selected,
 QTreeView::branch:selected {
@@ -789,7 +789,7 @@ QTreeView::branch:!selected:hover {
     background: #292929;
 }
 QAbstractItemView::item:selected:disabled {
-    color: #697177;
+    color: #696969;
 }
 QAbstractItemView QLineEdit,
 QAbstractItemView QAbstractSpinBox,
@@ -1012,7 +1012,7 @@ QMenu::indicator:checked {
 }
 QMenu::indicator {
     width: 18px;
-    background: #48494b;
+    background: #484848;
     margin-left: 3px;
     border-radius: $radius{4px};
 }
