@@ -148,7 +148,7 @@ QRadioButton:!window {
 }
 QCheckBox:hover,
 QRadioButton:hover {
-    border-bottom: 2px solid $highlight;
+    border-bottom: transparent;
 }
 
 QGroupBox {
@@ -411,7 +411,7 @@ QProgressBar {
     border-radius: $radius{4px};
 }
 QProgressBar::chunk {
-    background: $highlight;
+    background: $textedit-highlight;
     border-radius: $radius{3px};
 }
 QProgressBar::chunk:disabled {
@@ -426,16 +426,17 @@ examples: https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qpushbutto
 QPushButton {
     color: $highlight;
     border: 1px solid $border;
-    padding: 4px 8px;
+    /* padding: 4px 8px; */
     border-radius: $radius{4px};
+
 }
 QPushButton:!window {
-    background: transparent;
+    background: $dropdown;
 }
 QPushButton:flat,
 QPushButton:default {
     border: none;
-    padding: 5px 9px;
+    /* padding: 5px 9px; */
 }
 QPushButton:default {
     color: $highlight-text;
@@ -443,26 +444,42 @@ QPushButton:default {
 }
 QPushButton:hover,
 QPushButton:flat:hover {
+    color: $highlight-text;
     background: $button-hover;
+    border: $highlight;
 }
 QPushButton:pressed,
 QPushButton:flat:pressed,
 QPushButton:checked:pressed,
 QPushButton:flat:checked:pressed {
+    color: $highlight-text;
     background: $button-pressed;
+    border: $highlight;
+
 }
 QPushButton:checked,
 QPushButton:flat:checked {
+    color: $highlight-text;
     background: $button-checked;
+    border: $highlight;
+
 }
 QPushButton:default:hover {
+    color: $highlight-text;
     background: $highlight-hover;
+    border: $highlight;
+
 }
 QPushButton:default:pressed {
+    color: $highlight-text;
     background: $highlight-pressed;
+    border: $highlight;
+
 }
 QPushButton:default:disabled {
     background: $highlight-disabled;
+    border: $highlight;
+
 }
 
 /* QDialogButtonBox -------------------------------------------------------
@@ -546,7 +563,7 @@ QComboBox {
     border: 1px solid $border;
     min-height: 1.5em;
     padding: 0 4px;
-    background: $input-line;
+    background: $dropdown;
     border-radius: $radius{4px};
 }
 QComboBox:focus,
@@ -592,46 +609,66 @@ examples: https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qslider
 
 --------------------------------------------------------------------------- */
 QSlider {
-    padding: 2px 0;
+    background-color: none;
+    /* border: none; */
+    min-height: 6px;
+    
+    /* border-radius: 10px; */
+
+}
+QRangeSlider {
+    qproperty-barColor: $slider-bar;
+
 }
 QSlider::groove {
-    border-radius: $radius{2px};
+    background: $slider-groove;
+    border: 1px solid $border;
+    border-radius: 2px;
+    margin: -1px 0px;
+
 }
+
 QSlider::groove:horizontal {
-    height: 4px;
+    height: 6px;
 }
 QSlider::groove:vertical {
-    width: 4px;
+    width: 6px;
 }
+
+QSlider::add-page {
+    background: none;
+    /* border: 1px solid $border; */
+}
+QSlider::add-page:horizontal { height: 6px;}
+QSlider::add-page:vertical { width: 6px;}
+
+
 QSlider::sub-page, QSlider::handle {
-    background: $highlight;
+    background: $slider-bar;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    margin: 0px 1px;
+
+    /* border-radius: 3px;  */
 }
 QSlider::sub-page:disabled,
 QSlider::add-page:disabled,
 QSlider::handle:disabled {
     background: $highlight-disabled;
 }
-QSlider::add-page {
-    background: $highlight-border;
-}
-QSlider::handle:hover {
-    background: $highlight-hover;
-}
-QSlider::handle:pressed {
-    background: $highlight-pressed;
+QSlider::handle {
+    background: $highlight;
+    border-radius: 3px;
 }
 QSlider::handle:horizontal {
-    width: 16px;
-    height: 8px;
+    width: 6px;
     margin: -6px 0;
-    border-radius: 8px;
 }
 QSlider::handle:vertical {
-    width: 8px;
-    height: 16px;
+    height: 6px;
     margin: 0 -6px;
-    border-radius: 8px;
-}
+} 
+
 
 /* QTabWidget QTabBar -----------------------------------------------------
 
@@ -1157,7 +1194,6 @@ examples: https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qlineedit
 QLineEdit,
 QAbstractSpinBox {
     border: 1px solid $border;
-    padding: 3px 4px;
     /* Adjust the min-height of QLineEdit to the height of the characters. */
     min-height: 1em;
     background: $input-line;
