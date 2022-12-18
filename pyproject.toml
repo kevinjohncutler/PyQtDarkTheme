@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "PyQtDarkTheme"
-version = "1.1.1"
-description = "Flat dark theme for PySide and PyQt."
-authors = ["Yunosuke Ohsugi <63651161+5yutan5@users.noreply.github.com>"]
+name = "omnipose-theme"
+version = "1.1.2"
+description = "True gray variant of pyqtdarktheme for the Omnipose GUI."
+authors = ["Yunosuke Ohsugi <63651161+5yutan5@users.noreply.github.com>","Kevin Cutler"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/5yutan5/PyQtDarkTheme"
-homepage = "https://github.com/5yutan5/PyQtDarkTheme"
+repository = "https://github.com/kevinjohncutler/omnipose-theme"
+homepage = "https://github.com/kevinjohncutler/omnipose-theme"
 documentation = "https://pyqtdarktheme.readthedocs.io"
 packages = [{ include = "qdarktheme" }]
 
